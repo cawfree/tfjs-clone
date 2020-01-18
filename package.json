@@ -1,0 +1,39 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@tensorflow/tfjs": "^1.5.1",
+    "husky": "^4.0.10",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "uglify-js": "^3.7.5"
+  },
+  "scripts": {
+    "pretty": "yarn prettier ./src/* --write",
+    "build": "babel src --out-dir dist && yarn uglifyjs ./dist/* -o ./dist/*",
+    "start": "npm run-script build && node dist",
+    "test": "jest"
+  },
+  "keywords": [
+    "tensorflow",
+    "tfjs",
+    "neural",
+    "networks",
+    "copy",
+    "clone",
+    "duplicate",
+    "machine",
+    "learning"
+  ],
+  "name": "tfjs-clone",
+  "version": "0.0.1",
+  "description": "👬 Creates a deep clone of an existing @tensorflow/tfjs model.",
+  "main": "dist",
+  "repository": "https://github.com/cawfree/tfjs-clone",
+  "author": "Alex Thomas (@cawfree) <hello@cawfree.com>",
+  "license": "MIT",
+  "private": false
+}
